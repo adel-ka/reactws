@@ -1,14 +1,44 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  Button, Card,  ListGroup } from 'react-bootstrap';
-import   {Heading } from '. /Component/heading';
-import     { Navbars }   from    '. /Component/Navbars';
+import { Badge, Button, Card,  Container,  ListGroup, Navbar,   } from 'react-bootstrap';
+// import  { Navb } from './Component/Nav';
+
+
 function App(){
     return (
     <div className="App">
-    <Navbars />
-     <Heading /> 
-     
-    <Card style={{ width: '18rem' }}>
+   <Navbar className="bg-body-tertiary">
+    <Container>
+      <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse className="justify-content-end">
+        <Navbar.Text>
+          Signed in as: <a href="#login">Mark Otto</a>
+        </Navbar.Text>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+      <div> <div>
+    <h1>
+      Example heading <Badge bg="secondary">New</Badge>
+    </h1>
+    <h2>
+      Example Heading <Badge bg="secondary">New</Badge>
+    </h2>
+    <h3>
+      Example Heading <Badge bg="secondary">New</Badge>
+    </h3>
+    <h4>
+      Example Heading <Badge bg="secondary">New</Badge>
+    </h4>
+    <h5>
+      Example Heading <Badge bg="secondary">New</Badge>
+    </h5>
+    <h6>
+      Example heading <Badge bg="secondary">New</Badge>
+    </h6>
+  </div></div>
+  
+     <Card style={{ width: '18rem' }}>
       <ListGroup variant="flush">
         <ListGroup.Item>Cras justo odio</ListGroup.Item>
         <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
@@ -44,6 +74,8 @@ function App(){
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+     
+    
     </div>
     )
 }export default App;
